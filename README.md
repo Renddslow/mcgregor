@@ -29,7 +29,25 @@ $ yarn add mcgregor
 
 ## Usage
 
-```js
+```shell
+
+  Description
+    A helpful digital gardening assistant for managing digital gardens in Hugo.
+
+  Usage
+    $ mcgregor <command> [options]
+
+  Available Commands
+    seed    Scoop up wiki-style links and transform them into markdown links.
+    tend    Mark who last tended a post.
+
+  For more info, run any command with the `--help` flag
+    $ mcgregor seed --help
+    $ mcgregor tend --help
+
+  Options
+    -v, --version    Displays current version
+    -h, --help       Displays this message
 
 ```
 

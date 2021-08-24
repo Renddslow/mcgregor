@@ -20,7 +20,7 @@ type TendOpts = {
 (async () => {
   const McGregor = sade('mcgregor')
     .version((await readPackage()).packageJson.version)
-    .describe('');
+    .describe('A helpful digital gardening assistant for managing digital gardens in Hugo.');
 
   McGregor.command('seed')
     .describe('Scoop up wiki-style links and transform them into markdown links.')
@@ -37,7 +37,7 @@ type TendOpts = {
     });
 
   McGregor.command('tend')
-    .describe('Mark who last tended a post')
+    .describe('Mark who last tended a post.')
     .option('-i, --ignore', 'Glob string of files to ignore')
     .action(async (opts: TendOpts) => {
       const { stdout } = await cmd('git', ['config', 'user.name']);

@@ -1,6 +1,6 @@
 {
 	"name": "mcgregor",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"private": false,
 	"description": "A helpful digital gardening assistant for managing digital gardens in Hugo.",
 	"repository": "https://github.com/Renddslow/mcgregor",

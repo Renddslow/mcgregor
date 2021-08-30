@@ -38,7 +38,6 @@ $ yarn add mcgregor
     $ mcgregor <command> [options]
 
   Available Commands
-    seed    Scoop up wiki-style links and transform them into markdown links.
     tend    Mark who last tended a post.
 
   For more info, run any command with the `--help` flag
@@ -51,5 +50,26 @@ $ yarn add mcgregor
 
 ```
 
+### `tend`
+
+Mark who last tended a post.
+
+Applies the `lastTended` hash to the frontmatter of a post which includes the current date and who made the modification according to the git config of the changing user.
+
+The resulting frontmatter will look like:
+
+```markdown
+---
+lastTended:
+    by: Luke Skywalker
+    when: 2021-08-31
+---
+```
+
+Files should be passed to the `tend` script after all options have been passed:
+
+```shell
+$ mcgregor tend example.md packages/core/CHANGELOG.md
+```
 
 ## API

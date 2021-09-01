@@ -4,6 +4,7 @@ import sade from 'sade';
 import readPackage from 'read-pkg-up';
 
 import tend from './actions/tend';
+import plant from './actions/plant';
 
 type SeedOpts = {
   _: string[];
@@ -30,6 +31,16 @@ type SeedOpts = {
   //   .action((opts: SeedOpts) => {
   //     console.log(opts);
   //   });
+
+  McGregor.command('plant <dest>')
+    .describe('Scrape through all of the site to create a list of backlinks')
+    .example('plant data/backlinks.json')
+    .option(
+      '-c, --content-dir',
+      'The relative path to the directory where content is stored for this site',
+      'content',
+    )
+    .action(plant);
 
   McGregor.command('tend')
     .describe('Mark who last tended a post.')

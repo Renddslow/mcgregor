@@ -41,7 +41,7 @@ $ yarn add mcgregor
     tend    Mark who last tended a post.
 
   For more info, run any command with the `--help` flag
-    $ mcgregor seed --help
+    $ mcgregor plant --help
     $ mcgregor tend --help
 
   Options

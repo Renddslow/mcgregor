@@ -58,8 +58,10 @@
 	"dependencies": {
 		"catchify": "^2.6.1",
 		"frontmatter": "^0.0.3",
+		"globby": "^11.0.4",
 		"kleur": "^4.1.4",
 		"minimatch": "^3.0.4",
+		"mkdirp": "^1.0.4",
 		"read-pkg-up": "^7.0.1",
 		"sade": "^1.7.4",
 		"yaml": "^1.10.2"

@@ -2,6 +2,7 @@ import path from 'path';
 import { default as globby } from 'globby';
 import * as fs from 'fs';
 import mkdirp from 'mkdirp';
+import { URL } from 'url';
 
 type HoeOpts = {
   c: string;
@@ -21,7 +22,11 @@ const getAllLinks = (content: string): string[] => {
 
 const filterForInternalLinks = (link: string): boolean =>
   /^\//.test(link) && !/\.(png|jpg|jpeg|gif|svg)$/.test(link);
-const cleanLinks = (link: string): string => link.replace(/\/$/, '');
+const cleanLinks = (link: string): string => {
+  const linkWithoutTrailingSlash = link.replace(/\/$/, '');
+  const uri = new URL(linkWithoutTrailingSlash);
+  return uri.pathname;
+};
 
 const urlize = (link: string) => {
   const normalizedLink = path.normalize(
